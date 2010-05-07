@@ -1,0 +1,15 @@
+#!/bin/sh
+
+cd classes
+result=$?
+[ $result -ne 0 ] && exit $result
+
+echo "Creating tic.jar..."
+jar cMf ../tic.jar *
+result=$?
+[ $result -ne 0 ] && {
+    cd ..
+    exit $result
+}
+
+cd ..

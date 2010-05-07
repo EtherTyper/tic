@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo "Compiling..."
+rm -rf classes
+mkdir -p classes
+
+cd src
+for i in `find . -name "*.properties" -o -name "*.txt"`; do
+	mkdir -p "`dirname \"../classes/$i\"`"
+	cp -p "$i" "../classes/$i"
+done
+cd ..
+
+javac -O -d classes `find src -name "*.java"`
+result=$?
+[ $result -ne 0 ] && exit $result
+
+./createjars
+result=$?
+[ $result -ne 0 ] && exit $result
+
