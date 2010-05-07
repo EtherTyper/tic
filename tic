@@ -1,0 +1,2 @@
+#!/bin/sh
+java -cp tic.jar com.roncemer.tic.Tic

@@ -1,0 +1,12 @@
+// ActivationFunction.java
+// Copyright (c) 2007-2010 Ronald B. Cemer
+// All rights reserved.
+// This software is released under the BSD license.
+// Please see the accompanying LICENSE.txt for details.
+
+package com.roncemer.neural;
+
+public interface ActivationFunction {
+	public double calc(double value);
+	public double calcInverse(double value);
+}
