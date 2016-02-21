@@ -4,7 +4,7 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.genetic;
+package com.ethertyper.genetic;
 
 public interface CrossoverFunction {
 	public void crossover(boolean[] parent1, boolean[] parent2, boolean[] child);

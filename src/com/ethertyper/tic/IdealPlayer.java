@@ -4,7 +4,7 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.tic;
+package com.ethertyper.tic;
 
 public class IdealPlayer extends Player {
 	private int[] forkFreeIdx = new int[9];

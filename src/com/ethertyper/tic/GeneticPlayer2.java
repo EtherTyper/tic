@@ -4,11 +4,11 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.tic;
+package com.ethertyper.tic;
 
 import java.util.*;
 
-import com.roncemer.genetic.*;
+import com.ethertyper.genetic.*;
 
 public class GeneticPlayer2 extends Player {
 	private static final int BITS_PER_INDIVIDUAL = 4;

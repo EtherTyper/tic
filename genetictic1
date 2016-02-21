@@ -1,2 +1,2 @@
 #!/bin/sh
-java -cp tic.jar com.roncemer.tic.GeneticTic1
+java -cp tic.jar com.ethertyper.tic.GeneticTic1

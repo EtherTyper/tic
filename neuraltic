@@ -1,2 +1,2 @@
 #!/bin/sh
-java -cp tic.jar com.roncemer.tic.NeuralTic
+java -cp tic.jar com.ethertyper.tic.NeuralTic

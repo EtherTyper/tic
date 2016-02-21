@@ -1,2 +1,2 @@
 #!/bin/sh
-java -Xmx512m -cp tic.jar com.roncemer.tic.FindAllBoards
+java -Xmx512m -cp tic.jar com.ethertyper.tic.FindAllBoards

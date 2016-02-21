@@ -4,7 +4,7 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.genetic;
+package com.ethertyper.genetic;
 
 import java.util.*;
 

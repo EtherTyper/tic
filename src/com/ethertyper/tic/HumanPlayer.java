@@ -10,9 +10,9 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.tic;
+package com.ethertyper.tic;
 
-import com.roncemer.neural.*;
+import com.ethertyper.neural.*;
 import java.io.*;
 import java.util.*;
 

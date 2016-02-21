@@ -4,7 +4,7 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.tic;
+package com.ethertyper.tic;
 
 // Player which can play multiple games, beginning with the first available position
 // for each move, and skipping to the next possible combination each time gameDone()

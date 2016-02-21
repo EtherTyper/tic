@@ -4,7 +4,7 @@
 // This software is released under the BSD license.
 // Please see the accompanying LICENSE.txt for details.
 
-package com.roncemer.neural;
+package com.ethertyper.neural;
 
 public class BackPropagationNeuralNetwork {
 	protected int numLayers;

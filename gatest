@@ -1,2 +1,2 @@
 #!/bin/sh
-java -cp tic.jar com.roncemer.genetic.GATest
+java -cp tic.jar com.ethertyper.genetic.GATest
