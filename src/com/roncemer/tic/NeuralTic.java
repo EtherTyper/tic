@@ -31,7 +31,7 @@ public class NeuralTic {
 			if (pass%200==0) {
 				Tic tic = new Tic(neuralPlayer, human);
 				tic.playGame(null, false, false);
-                tic.showGrid(System.out);
+                		tic.showGrid(System.out);
 				switch (tic.getWinner()) {
 					case 'X':
 						System.out.println("It won.");
@@ -43,7 +43,7 @@ public class NeuralTic {
 						System.out.println("Nobody won.");
 						break;
 				}
-                System.in.read();
+                		System.in.read();
 			}
 		}
 
