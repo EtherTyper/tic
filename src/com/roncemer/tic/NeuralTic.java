@@ -11,6 +11,7 @@ import java.io.*;
 public class NeuralTic {
 	public static void main(String[] args) {
 		NeuralPlayer neuralPlayer = new NeuralPlayer();
+		HumanPlayer human= new HumanPlayer();
 
 		// Do training.
 		System.out.println("Learning...");
@@ -20,40 +21,26 @@ public class NeuralTic {
 			int nfail = neuralPlayer.getNumFailedMoves();
 			System.out.println("train pass="+pass+" npass="+npass+" nfail="+nfail);
 			if (nfail == 0) break;
-		}
-
-		// Do competition.
-		int numTestPasses = 100000;
-		for (int whichOpponent = 1; whichOpponent <= 2; whichOpponent++) {
-			Player opponent = (whichOpponent == 1) ? new IdealPlayer() : new RandomPlayer();
-			System.out.println("Competing against "+opponent.getClass().getName()+"...");
-			Tic tic = new Tic(neuralPlayer, opponent);
-			int xWinCount = 0, oWinCount = 0, nWinCount = 0;
-			for (int pass = 0; pass < numTestPasses; pass++) {
+			if (pass%200==0) {
+				Tic tic = new Tic(neuralPlayer, human);
 				tic.playGame(null, false, false);
 				switch (tic.getWinner()) {
-				case 'X':
-					xWinCount++;
-					break;
-				case 'O':
-					oWinCount++;
-					break;
-				default:
-					nWinCount++;
-					break;
+					case 'X':
+						System.out.println("You won.");
+						break;
+					case 'O':
+						System.out.println("It won.");
+						break;
+					default:
+						System.out.println("Nobody won.");
+						break;
 				}
 			}
-			// Output test result counts.
-			System.out.println("X won: "+xWinCount);
-			System.out.println("O won: "+oWinCount);
-			System.out.println("Nobody won: "+nWinCount);
 		}
 
-/*		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println("Encoded network:");
-		System.out.println(neuralPlayer.encodeNN());*/
+		System.out.println("\n\n\n");
+		System.out.println("Show encoded network? ");
+		if (Character.toLowerCase(new Scanner(System.in).next().charAt(0))=='y')
+			System.out.println("\n\n"+neuralPlayer.encodeNN());
 	}
 }
