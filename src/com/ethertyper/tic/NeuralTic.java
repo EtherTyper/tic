@@ -31,7 +31,7 @@ public class NeuralTic {
 			if (pass%200==0) {
 				Tic tic = new Tic(neuralPlayer, human);
 				tic.playGame(null, false, false);
-                tic.showGrid(System.out);
+				tic.showGrid(System.out);
 				switch (tic.getWinner()) {
 					case 'X':
 						System.out.println("It won.");
@@ -43,13 +43,13 @@ public class NeuralTic {
 						System.out.println("Nobody won.");
 						break;
 				}
-                new Scanner(System.in).nextLine();
+				new Scanner(System.in).nextLine();
 			}
 		}
 
 		System.out.println("\n\n\n");
-		System.out.println("Show encoded network? ");
+		System.out.print("Show encoded network? ");
 		if (Character.toLowerCase(new Scanner(System.in).next().charAt(0))=='y')
-			System.out.println("\n\n"+neuralPlayer.encodeNN());
+			System.out.println("\n\n\n"+neuralPlayer.encodeNN());
 	}
 }
